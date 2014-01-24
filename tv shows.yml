@@ -1,0 +1,26 @@
+TV Shows:
+  - Community
+  - Modern Family
+  - How I Met Your Mother
+  - The Big Bang Theory
+  - Mythbusters
+  - Parks and Recreation
+  - The Walking Dead
+  - Game of Thrones
+  - Mad Men
+  - The Newsroom
+  - Eastbound and Down
+  - Its Always Sunny in Philadelphia
+  - Louie
+  - South Park
+  - True Blood
+  - Wilfred
+Search URL:
+  http://ezrss.it/search/index.php?simple&show_name=%s&mode=rss
+TV Show Storage Root Path:
+  /mnt/storage/TV Shows
+Download Path:
+  /mnt/storage/Downloads
+Torrent Watch Path:
+  /mnt/storage/Downloads/watch
+Sho:

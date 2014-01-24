@@ -1,0 +1,31 @@
+
+[1mFrom:[0m /home/jlorich/scripts/scrape_torrents.rb @ line 95 TVShowManager#parse_file_name:
+
+     [1;34m78[0m: [32mdef[0m [1;34mparse_file_name[0m(file_name)
+     [1;34m79[0m:   expession_list = [
+     [1;34m80[0m:     [35m[1;35m/[0m[35m^(?<show_name>[a-zA-Z0-9[1;35m\s[0m[35m]+[ -]*) (?<season>[[1;35m\d[0m[35m]+)x(?<episode>[[1;35m\d[0m[35m]+).*$[1;35m/[0m[35m[0m,
+     [1;34m81[0m:     [35m[1;35m/[0m[35m^(?<show_name>[a-zA-Z0-9[1;35m\s[0m[35m]+) - (?<description>[a-zA-Z0-9[1;35m\s[0m[35m]+) (?<season>[[1;35m\d[0m[35m]+)x(?<episode>[[1;35m\d[0m[35m]+).*[1;35m/[0m[35m[0m 
+     [1;34m82[0m:   ]
+     [1;34m83[0m: 
+     [1;34m84[0m:   expession_list.each [32mdo[0m |expression|
+     [1;34m85[0m:     match = expression.match file_name
+     [1;34m86[0m: 
+     [1;34m87[0m:     [32mif[0m match
+     [1;34m88[0m:       episode = {}.tap { |show|
+     [1;34m89[0m:         show[[33m:show_name[0m] = match[[33m:show_name[0m] [32mif[0m match[[33m:show_name[0m]
+     [1;34m90[0m:         show[[33m:description[0m] = match[[33m:description[0m] [32mif[0m match[[33m:description[0m]
+     [1;34m91[0m:         show[[33m:season[0m] = match[[33m:season[0m] [32mif[0m match[[33m:season[0m]
+     [1;34m92[0m:         show[[33m:episode[0m] = match[[33m:episode[0m] [32mif[0m match[[33m:episode[0m]
+     [1;34m93[0m:       }
+     [1;34m94[0m: 
+ =>  [1;34m95[0m:       binding.pry
+     [1;34m96[0m:       [32mbreak[0m
+     [1;34m97[0m:     [32mend[0m
+     [1;34m98[0m:   [32mend[0m
+     [1;34m99[0m:    [1;30m#{}"The Big Bang Theory 7x13 [HDTV - LOL]"[0m
+    [1;34m100[0m: 
+    [1;34m101[0m:    [35m[1;35m/[0m[35m^(?<show_name>[a-zA-Z0-9[1;35m\s[0m[35m]+[ -]*) (?<season>[[1;35m\d[0m[35m]+)x(?<episode>[[1;35m\d[0m[35m]+).*$[1;35m/[0m[35m[0m.match(file_name)
+    [1;34m102[0m: 
+    [1;34m103[0m:    
+    [1;34m104[0m: [32mend[0m
+
